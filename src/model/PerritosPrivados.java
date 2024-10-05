@@ -55,10 +55,6 @@ public class PerritosPrivados {
     public void setEdad(int edad) {
         if (edad > 0) {
             this.edad = edad;
-//        } else {
-//            this.edad = 0;
-            // si es que la edad es mayor a 0 asigna la edad ingresada, si no, asigna el valor 0 a edad
-            //la idea de esto es no retornar en toString la edad si es que es una edad imposible
         }
     }
 
@@ -68,7 +64,7 @@ public class PerritosPrivados {
             return "Perrito: " + nombre + ", Raza: " + raza + ", Edad: " + edad + " años" + ", Color: " + color;
         } else {
             return "Perrito: " + nombre + ", Raza: " + raza + ", Color: " + color;
-            // No se incluye la edad si es igual a 0, esa edad viene dada desde el if y else creados en setEdad
+            // No se incluye la edad es menor que 0
         }
     }
 }

@@ -16,7 +16,7 @@ public class Main {
 
        gatito1.mostrarInfo();
 
-        //hasta acá bien, pero qué pasa si algún chistoso le ingresa un nombre no válido a un gatito?
+        //hasta acá bien, pero qué pasa si algún chistoso le ingresa una edad no válida a un gatito?
         //por ejemplo:
         //gatito1.edad = -17;
         //no tenemos control sobre eso y la idea de la encapsulación es validar o filtrar los valores antes de asignarlos
@@ -56,7 +56,7 @@ public class Main {
         perrito2.setNombre(null);
         perrito2.setRaza("Doberman");
         perrito2.setColor("Negro");
-        perrito2.setEdad(-5); // edad imposible
+        perrito2.setEdad(-99); // edad imposible
 
         //imprimo mi segundo perrito (que no tiene nombre ni edad válida)
         //si el nombre está vacío o es null lo reemplaza por un NN, y si la edad es imposible, la cambia a 0 y no la publica
@@ -73,5 +73,10 @@ public class Main {
         System.out.println(perrito3.toString());
 
         System.out.println(perrito2.getEdad());
+        //la edad del perrito2 es -99, pero lo imprime como 0
+        //¿por qué pasa eso?
+        //el valor predeterminado para un int en java es 0
+        //al entrar en el setEdad y no cumplir con la condición, no varía su valor por defecto
+        //sólo se modifica la edad si es que esta es mayor a 0
     }
 }
