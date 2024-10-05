@@ -59,7 +59,7 @@ public class Main {
         perrito2.setEdad(-99); // edad imposible
 
         //imprimo mi segundo perrito (que no tiene nombre ni edad válida)
-        //si el nombre está vacío o es null lo reemplaza por un NN, y si la edad es imposible, la cambia a 0 y no la publica
+        //si el nombre está vacío o es null lo reemplaza por un NN, y si la edad es imposible, la deja en 0 y no la publica
         //estas validaciones se realizan en los setters y en toString de PerritosPrivados
         System.out.println(perrito2.toString());
 
